@@ -56,10 +56,10 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=5.1.4">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=5.1.4">
 
 
   <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="hexo," />
+  <meta name="keywords" content="树," />
 
 
 
@@ -79,18 +79,20 @@
 
 
 
-<meta name="description" content="试一试这个">
-<meta name="keywords" content="hexo">
+<meta name="description" content="先给出一道很简单，喜闻乐见的二叉树算法题： 给出一个二叉查找树和一个目标值，如果其中有两个元素的和等于目标值则返回真，否则返回假。 例如：123456Input:      5     / \    3   6   / \   \  2   4   7 Target = 9 Output: True123456Input:     5   / \  3   6 / \   \2   4   7 T">
+<meta name="keywords" content="树">
 <meta property="og:type" content="article">
-<meta property="og:title" content="first blog">
-<meta property="og:url" content="http://yoursite.com/2018/04/05/first-blog/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="试一试这个">
+<meta property="og:title" content="从一段简单算法题来谈二叉查找树(BST)的基础算法">
+<meta property="og:url" content="https://leakeyash.github.io/2018/04/05/first-blog/index.html">
+<meta property="og:site_name" content="leakeyash">
+<meta property="og:description" content="先给出一道很简单，喜闻乐见的二叉树算法题： 给出一个二叉查找树和一个目标值，如果其中有两个元素的和等于目标值则返回真，否则返回假。 例如：123456Input:      5     / \    3   6   / \   \  2   4   7 Target = 9 Output: True123456Input:     5   / \  3   6 / \   \2   4   7 T">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-04-05T11:10:27.505Z">
+<meta property="og:image" content="https://leakeyash.github.io/2018/04/05/images/sample1.png">
+<meta property="og:updated_time" content="2018-04-06T05:18:57.342Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="first blog">
-<meta name="twitter:description" content="试一试这个">
+<meta name="twitter:title" content="从一段简单算法题来谈二叉查找树(BST)的基础算法">
+<meta name="twitter:description" content="先给出一道很简单，喜闻乐见的二叉树算法题： 给出一个二叉查找树和一个目标值，如果其中有两个元素的和等于目标值则返回真，否则返回假。 例如：123456Input:      5     / \    3   6   / \   \  2   4   7 Target = 9 Output: True123456Input:     5   / \  3   6 / \   \2   4   7 T">
+<meta name="twitter:image" content="https://leakeyash.github.io/2018/04/05/images/sample1.png">
 
 
 
@@ -120,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/04/05/first-blog/"/>
+  <link rel="canonical" href="https://leakeyash.github.io/2018/04/05/first-blog/"/>
 
 
 
 
 
-  <title>first blog | Hexo</title>
+  <title>从一段简单算法题来谈二叉查找树(BST)的基础算法 | leakeyash</title>
   
 
 
@@ -147,7 +149,6 @@
 
   <div class="container sidebar-position-right page-post-detail">
     <div class="headband"></div>
-    <a href="https://github.com/you"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
   <div class="site-meta ">
@@ -156,7 +157,7 @@
     <div class="custom-logo-site-title">
       <a href="/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Hexo</span>
+        <span class="site-title">leakeyash</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -204,9 +205,19 @@
         <li class="menu-item menu-item-something">
           <a href="/something" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-leaf"></i> <br />
             
             试一下
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
           </a>
         </li>
       
@@ -243,16 +254,16 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/05/first-blog/">
+    <link itemprop="mainEntityOfPage" href="https://leakeyash.github.io/2018/04/05/first-blog/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Henry Li">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/images/avatar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
+      <meta itemprop="name" content="leakeyash">
     </span>
 
     
@@ -260,7 +271,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">first blog</h1>
+          <h1 class="post-title" itemprop="name headline">从一段简单算法题来谈二叉查找树(BST)的基础算法</h1>
         
 
         <div class="post-meta">
@@ -295,8 +306,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/试一试/" itemprop="url" rel="index">
-                    <span itemprop="name">试一试</span>
+                  <a href="/categories/algorithm/" itemprop="url" rel="index">
+                    <span itemprop="name">algorithm</span>
                   </a>
                 </span>
 
@@ -332,7 +343,67 @@
       
 
       
-        <p>试一试这个</p>
+        <p>先给出一道很简单，喜闻乐见的二叉树算法题：</p>
+<p>给出一个二叉查找树和一个目标值，如果其中有两个元素的和等于目标值则返回真，否则返回假。</p>
+<p>例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Input:  </span><br><span class="line">    5  </span><br><span class="line">   / \  </span><br><span class="line">  3   6  </span><br><span class="line"> / \   \  </span><br><span class="line">2   4   7</span><br></pre></td></tr></table></figure></p>
+<p>Target = 9</p>
+<p>Output: True<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Input: </span><br><span class="line">    5</span><br><span class="line">   / \</span><br><span class="line">  3   6</span><br><span class="line"> / \   \</span><br><span class="line">2   4   7</span><br></pre></td></tr></table></figure></p>
+<p>Target = 28</p>
+<p>Output: False
+　</p>
+<h3 id="什么是二叉树？"><a href="#什么是二叉树？" class="headerlink" title="什么是二叉树？"></a>什么是二叉树？</h3><p>二叉树是每个节点最多有两个子树的树结构。  </p>
+<hr>
+<h3 id="什么是二叉查找树（binary-search-tree）"><a href="#什么是二叉查找树（binary-search-tree）" class="headerlink" title="什么是二叉查找树（binary search tree）"></a>什么是二叉查找树（binary search tree）</h3><p>二叉排序树或者是一棵空树，或者是具有下列性质的二叉树：</p>
+<ul>
+<li>若左子树不空，则左子树上所有结点的值均小于或等于它的根结点的值；</li>
+<li>若右子树不空，则右子树上所有结点的值均大于或等于它的根结点的值；</li>
+<li>左、右子树也分别为二叉排序树；</li>
+</ul>
+<hr>
+<h3 id="二叉树的遍历"><a href="#二叉树的遍历" class="headerlink" title="二叉树的遍历"></a>二叉树的遍历</h3><ul>
+<li><p><strong>先序遍历(pre-order)</strong><br>　　首先访问根结点然后遍历左子树，最后遍历右子树。在遍历左、右子树时，仍然先访问根结点，然后遍历左子树，最后遍历右子树，如果二叉树为空则返回。</p>
+</li>
+<li><p><strong>后序遍历((post-order)</strong><br>　　后序遍历首先遍历左子树，然后遍历右子树，最后访问根结点，在遍历左、右子树时，仍然先遍历左子树，然后遍历右子树，最后遍历根结点。</p>
+</li>
+<li><p><strong>中序遍历(in-order)</strong><br>　　中序遍历首先遍历左子树，然后访问根节点，然后遍历右子树。  </p>
+</li>
+</ul>
+<hr>
+<p>举个例子：<br><img src="../images/sample1.png" alt="sample"><br>先序遍历节点遍历顺序： A B D H I K E C F G J L<br>后序遍历节点遍历顺序： H K I D E B F L J G C A<br>中序遍历节点遍历顺序： H D I K B E A F C J L G    </p>
+<hr>
+<h2 id="算法题解法"><a href="#算法题解法" class="headerlink" title="算法题解法"></a>算法题解法</h2><ol>
+<li><h4 id="使用HashSet"><a href="#使用HashSet" class="headerlink" title="使用HashSet"></a>使用HashSet</h4>　　最简单的解法就是遍历整个树，然后得到所有的节点对来判断他们是否能相加得到目标值k。但是我们稍微考虑一下缓存，这个方案还能提高一些。<br>　　如果两个元素的和等于k，即x+y=k，并且我们已经知道x是已经存在于树的，我们只要检索y是否也在树的节点里即可，即y=k-x。基于这个简单的缓存，我们可以在每一步去遍历这棵树的两个方向（左子树和右子树）。我们使用一个集合来存遍历过程中被遍历过的元素。<br>　　对于每一个当前的节点，有值p，我们去检查k-p是否存在于集合中。如果存在的话，我们可以得到存在2个元素的值等于k的结论。否则，我们继续把这个值存进集合。<br>　　如果遍历了整棵树后，没有这样的p值，那就证明不存在2个元素的值相加等于k。<br>　　代码如下：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">public class Solution &#123;</span><br><span class="line">    public boolean findTarget(TreeNode root, int k) &#123;</span><br><span class="line">        Set&lt;Integer&gt; set = new HashSet();</span><br><span class="line">        return find(root, k, set);</span><br><span class="line">    &#125;</span><br><span class="line">    public boolean find(TreeNode root, int k, Set &lt; Integer &gt; set) &#123;</span><br><span class="line">        if (root == null)</span><br><span class="line">            return false;</span><br><span class="line">        if (set.contains(k - root.val))</span><br><span class="line">            return true;</span><br><span class="line">        set.add(root.val);</span><br><span class="line">        return find(root.left, k, set) || find(root.right, k, set);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>时间复杂度为 O(n)，空间复杂度也为O(n).</p>
+<ol start="2">
+<li><h4 id="使用BFS和HashSet"><a href="#使用BFS和HashSet" class="headerlink" title="使用BFS和HashSet."></a>使用BFS和HashSet.</h4></li>
+</ol>
+<p>在这个解法中，使用HashSet的想法和解法1是一样的。但是我们在遍历的时候使用广度优先算法（Breadth First Search），这是一个在树的遍历算法中很常用的算法。BFS的方法如如下总结的一样。我们在开始的时候把根节点放进一个队列。<br>我们还是会用到如上解法的一个集合。然后在每一步我们会这么做：  </p>
+<ol>
+<li>从队列queue的头部去除一个元素p。</li>
+<li>判断k-p是否存在于集合中。如果是，返回true。</li>
+<li>否则，把这个元素p加到集合中。然后，把这个节点的左右子节点加到队列queue的末尾。</li>
+<li>继续1-3步骤，直到队列为空。</li>
+<li>如果队列为空，则返回false。  </li>
+</ol>
+<p>照这个步骤，我们一层一层的循环了整个树。<br>代码如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">public class Solution &#123;</span><br><span class="line">    public boolean findTarget(TreeNode root, int k) &#123;</span><br><span class="line">        Set&lt;Integer&gt; set = new HashSet();</span><br><span class="line">        Queue&lt;TreeNode&gt; queue = new LinkedList();</span><br><span class="line">        queue.add(root);</span><br><span class="line">        while (!queue.isEmpty()) &#123;</span><br><span class="line">            if (queue.peek() != null) &#123;</span><br><span class="line">                TreeNode node = queue.remove();</span><br><span class="line">                if (set.contains(k - node.val))</span><br><span class="line">                    return true;</span><br><span class="line">                set.add(node.val);</span><br><span class="line">                queue.add(node.right);</span><br><span class="line">                queue.add(node.left);</span><br><span class="line">            &#125; else</span><br><span class="line">                queue.remove();</span><br><span class="line">        &#125;</span><br><span class="line">        return false;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>时间复杂度为 O(n)，空间复杂度也为O(n).</p>
+<ol start="3">
+<li><h4 id="使用BST"><a href="#使用BST" class="headerlink" title="使用BST"></a>使用BST</h4></li>
+</ol>
+<p>在这个解法中，我们要充分利用这个树是一个二叉搜索树，现在，我们知道一个树的中序遍历会得到一个递增的节点集。如此一来，我们可以对这棵树进行中序排序，然后把结果存进一个数组，这个数组的元素按照升序的顺序排列。<br>上面的步骤做好以后，我们使用l和r两个指针指向数组的开头和结尾。然后，我们这么做：</p>
+<ol>
+<li>判断l和r指向的节点的值的和是否等于k。如果是，立马返回true。</li>
+<li>如果他们的和小于k，l移向下一个元素。我们需要得到更大的和，那我们只有提高我们更小的那个值。</li>
+<li>如果他们的和大于k，r移向上一个元素。我们需要得到更小的和，那我们只有减少我们更大的那个值。</li>
+<li>循环执行1-3步，直到l和r指针相遇。</li>
+<li>如果l和r指针相遇，则返回false.
+　<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">public class Solution &#123;</span><br><span class="line">    public boolean findTarget(TreeNode root, int k) &#123;</span><br><span class="line">        List&lt;Integer&gt; list = new ArrayList();</span><br><span class="line">        inorder(root, list);</span><br><span class="line">        int l = 0, r = list.size() - 1;</span><br><span class="line">        while (l &lt; r) &#123;</span><br><span class="line">            int sum = list.get(l) + list.get(r);</span><br><span class="line">            if (sum == k)</span><br><span class="line">                return true;</span><br><span class="line">            if (sum &lt; k)</span><br><span class="line">                l++;</span><br><span class="line">            else</span><br><span class="line">                r--;</span><br><span class="line">        &#125;</span><br><span class="line">        return false;</span><br><span class="line">    &#125;</span><br><span class="line">    public void inorder(TreeNode root, List &lt; Integer &gt; list) &#123;</span><br><span class="line">        if (root == null)</span><br><span class="line">            return;</span><br><span class="line">        inorder(root.left, list);</span><br><span class="line">        list.add(root.val);</span><br><span class="line">        inorder(root.right, list);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>时间复杂度为 O(n)，空间复杂度也为O(n).</p>
+<p>至于广度优先算法和深度优先算法，以后有机会再展开吧。</p>
 
       
     </div>
@@ -350,7 +421,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/hexo/" rel="tag"># hexo</a>
+            <a href="/tags/树/" rel="tag"># 树</a>
           
         </div>
       
@@ -423,10 +494,23 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.jpg"
+                alt="Henry Li" />
             
               <p class="site-author-name" itemprop="name">Henry Li</p>
               <p class="site-description motion-element" itemprop="description"></p>
@@ -450,7 +534,7 @@
               
               <div class="site-state-item site-state-categories">
                 
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">分类</span>
                 
               </div>
@@ -461,7 +545,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -471,6 +555,22 @@
 
           
 
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/leakeyash" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:leakeyash@163.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
           
 
           
@@ -484,6 +584,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是二叉树？"><span class="nav-number">1.</span> <span class="nav-text">什么是二叉树？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是二叉查找树（binary-search-tree）"><span class="nav-number">2.</span> <span class="nav-text">什么是二叉查找树（binary search tree）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二叉树的遍历"><span class="nav-number">3.</span> <span class="nav-text">二叉树的遍历</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#算法题解法"><span class="nav-number"></span> <span class="nav-text">算法题解法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#使用HashSet"><span class="nav-number">0.1.</span> <span class="nav-text">使用HashSet</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#使用BFS和HashSet"><span class="nav-number">0.2.</span> <span class="nav-text">使用BFS和HashSet.</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#使用BST"><span class="nav-number">0.3.</span> <span class="nav-text">使用BST</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -501,7 +617,7 @@
         <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
-    <i class="fa fa-user"></i>
+    <i class="fa fa-spinner"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">Henry Li</span>
 
@@ -513,16 +629,11 @@
   <i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
   本站访客数:<span id="busuanzi_value_site_uv"></span>
   </span>
-  由  强力驱动</div>
+  </div>
 
 
 
-  <span class="post-meta-divider">|</span>
-
-
-
-  <div class="theme-info">主题 &mdash; Next
-#}</div>
+  <span class="post-meta-divider">|  愿星空永远绚烂</span>
 
 
 
@@ -686,6 +797,21 @@
   
 
   
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
 
   
   
