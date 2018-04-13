@@ -69,7 +69,7 @@
 
 
 
-  <meta name="keywords" content="henry, leakey" />
+  <meta name="keywords" content="algorithm,sort," />
 
 
 
@@ -80,14 +80,18 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="tags">
-<meta property="og:url" content="https://leakeyash.github.io/tags/index.html">
+<meta name="description" content="&amp;emsp;&amp;emsp;排序有内部排序和外部排序，内部排序是数据记录在内存中进行排序，而外部排序是因排序的数据很大，一次不能容纳全部的排序记录，在排序过程中需要访问外存。 外部排序&amp;emsp;&amp;emsp;一般来说外排序分为两个步骤：预处理和合并排序。首先，根据可用内存的大小，将外存上含有n个纪录的文件分成若干长度为t的子文件（或段）；其次，利用内部排序的方法，对每个子文件的t个纪录进行内部排序。这">
+<meta name="keywords" content="algorithm,sort">
+<meta property="og:type" content="article">
+<meta property="og:title" content="排序算法简介">
+<meta property="og:url" content="https://leakeyash.github.io/2018/04/10/sort-brief/index.html">
 <meta property="og:site_name" content="leakeyash">
+<meta property="og:description" content="&amp;emsp;&amp;emsp;排序有内部排序和外部排序，内部排序是数据记录在内存中进行排序，而外部排序是因排序的数据很大，一次不能容纳全部的排序记录，在排序过程中需要访问外存。 外部排序&amp;emsp;&amp;emsp;一般来说外排序分为两个步骤：预处理和合并排序。首先，根据可用内存的大小，将外存上含有n个纪录的文件分成若干长度为t的子文件（或段）；其次，利用内部排序的方法，对每个子文件的t个纪录进行内部排序。这">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-04-05T11:10:30.000Z">
+<meta property="og:updated_time" content="2018-04-10T14:08:06.036Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="tags">
+<meta name="twitter:title" content="排序算法简介">
+<meta name="twitter:description" content="&amp;emsp;&amp;emsp;排序有内部排序和外部排序，内部排序是数据记录在内存中进行排序，而外部排序是因排序的数据很大，一次不能容纳全部的排序记录，在排序过程中需要访问外存。 外部排序&amp;emsp;&amp;emsp;一般来说外排序分为两个步骤：预处理和合并排序。首先，根据可用内存的大小，将外存上含有n个纪录的文件分成若干长度为t的子文件（或段）；其次，利用内部排序的方法，对每个子文件的t个纪录进行内部排序。这">
 
 
 
@@ -117,13 +121,13 @@
 
 
 
-  <link rel="canonical" href="https://leakeyash.github.io/tags/"/>
+  <link rel="canonical" href="https://leakeyash.github.io/2018/04/10/sort-brief/"/>
 
 
 
 
 
-  <title>tags | leakeyash</title>
+  <title>排序算法简介 | leakeyash</title>
   
 
 
@@ -237,40 +241,193 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://leakeyash.github.io/2018/04/10/sort-brief/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Henry Li">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="leakeyash">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">tags</h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <div class="tag-cloud">
-            <div class="tag-cloud-title">
-                目前共计 3 个标签
-            </div>
-            <div class="tag-cloud-tags">
-              <a href="/tags/algorithm/" style="font-size: 30px; color: #111">algorithm</a> <a href="/tags/sort/" style="font-size: 30px; color: #111">sort</a> <a href="/tags/树/" style="font-size: 12px; color: #ccc">树</a>
-            </div>
-          </div>
+          <h1 class="post-title" itemprop="name headline">排序算法简介</h1>
         
-      </div>
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-10T21:48:06+08:00">
+                2018-04-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/algorithm/" itemprop="url" rel="index">
+                    <span itemprop="name">algorithm</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <p>&emsp;&emsp;排序有内部排序和外部排序，内部排序是数据记录在内存中进行排序，而外部排序是因排序的数据很大，一次不能容纳全部的排序记录，在排序过程中需要访问外存。</p>
+<h4 id="外部排序"><a href="#外部排序" class="headerlink" title="外部排序"></a>外部排序</h4><p>&emsp;&emsp;一般来说外排序分为两个步骤：预处理和合并排序。首先，根据可用内存的大小，将外存上含有n个纪录的文件分成若干长度为t的子文件（或段）；其次，利用内部排序的方法，对每个子文件的t个纪录进行内部排序。这些经过排序的子文件（段）通常称为顺串(run)，顺串生成后即将其写入外存。这样在外存上就得到了m个顺串（m=[n/t]）。最后，对这些顺串进行归并，使顺串的长度逐渐增大，直到所有的待排序的几率成为一个顺串为止。</p>
+<h4 id="内部排序"><a href="#内部排序" class="headerlink" title="内部排序"></a>内部排序</h4><ul>
+<li>插入排序<ul>
+<li>直接插入排序</li>
+<li>希尔排序</li>
+</ul>
+</li>
+<li>选择排序<ul>
+<li>简单选择排序</li>
+<li>堆排序</li>
+</ul>
+</li>
+<li>交换排序<ul>
+<li>冒泡排序</li>
+<li>快速排序</li>
+</ul>
+</li>
+<li>归并排序</li>
+<li>基数排序</li>
+</ul>
+<p>&emsp;&emsp;当n较大，则应采用时间复杂度为O(nlog2n)的排序方法：快速排序、堆排序或归并排序序。<br>&emsp;&emsp;<font color="lightblue">快速排序是目前基于比较的内部排序中被认为是最好的方法，当待排序的关键字是随机分布时，快速排序的平均时间最短。</font></p>
+
       
     </div>
     
     
     
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/algorithm/" rel="tag"># algorithm</a>
+          
+            <a href="/tags/sort/" rel="tag"># sort</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/04/05/first-blog/" rel="next" title="从一段简单算法题来谈二叉查找树(BST)的基础算法">
+                <i class="fa fa-chevron-left"></i> 从一段简单算法题来谈二叉查找树(BST)的基础算法
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/04/10/insertion-sort/" rel="prev" title="插入排序">
+                插入排序 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -303,8 +460,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -384,6 +550,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#外部排序"><span class="nav-number">1.</span> <span class="nav-text">外部排序</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#内部排序"><span class="nav-number">2.</span> <span class="nav-text">内部排序</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
