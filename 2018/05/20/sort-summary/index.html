@@ -69,7 +69,7 @@
 
 
 
-  <meta name="keywords" content="henry, leakey" />
+  <meta name="keywords" content="algorithm,sort," />
 
 
 
@@ -80,14 +80,23 @@
 
 
 
+<meta name="description" content="各种排序的稳定性，时间复杂度和空间复杂度总结：  时间复杂度函数的情况：    时间复杂度函数O(n)的增长情况： 所以对n较大的排序记录。一般的选择都是时间复杂度为O(nlog2n)的排序方法。 时间复杂度来说：    平方阶(O(n2))排序各类简单排序:直接插入、直接选择和冒泡排序； 线性对数阶(O(nlog2n))排序快速排序、堆排序和归并排序； O(n1+§))排序,§是介于0和1之间的">
+<meta name="keywords" content="algorithm,sort">
 <meta property="og:type" content="article">
-<meta property="og:title" content="sort-summary">
+<meta property="og:title" content="常见排序算法总结">
 <meta property="og:url" content="https://leakeyash.github.io/2018/05/20/sort-summary/index.html">
 <meta property="og:site_name" content="leakeyash">
+<meta property="og:description" content="各种排序的稳定性，时间复杂度和空间复杂度总结：  时间复杂度函数的情况：    时间复杂度函数O(n)的增长情况： 所以对n较大的排序记录。一般的选择都是时间复杂度为O(nlog2n)的排序方法。 时间复杂度来说：    平方阶(O(n2))排序各类简单排序:直接插入、直接选择和冒泡排序； 线性对数阶(O(nlog2n))排序快速排序、堆排序和归并排序； O(n1+§))排序,§是介于0和1之间的">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-05-20T14:04:17.027Z">
+<meta property="og:image" content="https://leakeyash.github.io/2018/05/20/images/sort-summary-1.jpg">
+<meta property="og:image" content="https://leakeyash.github.io/2018/05/20/images/sort-summary-2.jpg">
+<meta property="og:image" content="https://leakeyash.github.io/2018/05/20/images/sort-summary-3.jpg">
+<meta property="og:image" content="https://leakeyash.github.io/2018/05/20/images/sort-summary-4.png">
+<meta property="og:updated_time" content="2018-05-20T14:28:10.031Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="sort-summary">
+<meta name="twitter:title" content="常见排序算法总结">
+<meta name="twitter:description" content="各种排序的稳定性，时间复杂度和空间复杂度总结：  时间复杂度函数的情况：    时间复杂度函数O(n)的增长情况： 所以对n较大的排序记录。一般的选择都是时间复杂度为O(nlog2n)的排序方法。 时间复杂度来说：    平方阶(O(n2))排序各类简单排序:直接插入、直接选择和冒泡排序； 线性对数阶(O(nlog2n))排序快速排序、堆排序和归并排序； O(n1+§))排序,§是介于0和1之间的">
+<meta name="twitter:image" content="https://leakeyash.github.io/2018/05/20/images/sort-summary-1.jpg">
 
 
 
@@ -123,7 +132,7 @@
 
 
 
-  <title>sort-summary | leakeyash</title>
+  <title>常见排序算法总结 | leakeyash</title>
   
 
 
@@ -266,7 +275,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">sort-summary</h1>
+          <h1 class="post-title" itemprop="name headline">常见排序算法总结</h1>
         
 
         <div class="post-meta">
@@ -288,6 +297,28 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/algorithm/" itemprop="url" rel="index">
+                    <span itemprop="name">algorithm</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -316,7 +347,62 @@
       
 
       
-        
+        <p>各种排序的稳定性，时间复杂度和空间复杂度总结：</p>
+<p><img src="../images/sort-summary-1.jpg" alt="sample"></p>
+<p>时间复杂度函数的情况：  </p>
+<p><img src="../images/sort-summary-2.jpg" alt="sample"></p>
+<p>时间复杂度函数O(n)的增长情况：<br><img src="../images/sort-summary-3.jpg" alt="sample"></p>
+<p>所以对n较大的排序记录。一般的选择都是时间复杂度为O(nlog2n)的排序方法。</p>
+<p>时间复杂度来说：  </p>
+<ol>
+<li>平方阶(O(n2))排序<br>各类简单排序:直接插入、直接选择和冒泡排序；</li>
+<li>线性对数阶(O(nlog2n))排序<br>快速排序、堆排序和归并排序；</li>
+<li>O(n1+§))排序,§是介于0和1之间的常数。<br>希尔排序</li>
+<li>线性阶(O(n))排序<br>基数排序，此外还有桶、箱排序。  </li>
+</ol>
+<p>说明：  </p>
+<ul>
+<li>当原表有序或基本有序时，直接插入排序和冒泡排序将大大减少比较次数和移动记录的次数，时间复杂度可降至O（n） </li>
+<li>而快速排序则相反，当原表基本有序时，将蜕化为冒泡排序，时间复杂度提高为O（n2）  </li>
+<li>原表是否有序，对简单选择排序、堆排序、归并排序和基数排序的时间复杂度影响不大。  </li>
+</ul>
+<p><strong>稳定性</strong>：<br>排序算法的稳定性:<br>&emsp;&emsp;若待排序的序列中，存在多个具有相同关键字的记录，经过排序， 这些记录的相对次序保持不变，则称该算法是稳定的；若经排序后，记录的相对 次序发生了改变，则称该算法是不稳定的。<br>稳定性的好处：<br>&emsp;&emsp;排序算法如果是稳定的，那么从一个键上排序，然后再从另一个键上排序，第一个键排序的结果可以为第二个键排序所用。基数排序就是这样，先按低位排序，逐次按高位排序，低位相同的元素其顺序再高位也相同时是不会改变的。另外，如果排序算法稳定，可以避免多余的比较。  </p>
+<p>稳定的排序算法：<br>冒泡排序、插入排序、归并排序和基数排序<br>不是稳定的排序算法：<br>选择排序、快速排序、希尔排序、堆排序</p>
+<p><strong>选择排序算法准则</strong>：<br>&emsp;&emsp;每种排序算法都各有优缺点。因此，在实用时需根据不同情况适当选用，甚至可以将多种方法结合起来使用。</p>
+<p>选择排序算法的依据<br>&emsp;&emsp;影响排序的因素有很多，平均时间复杂度低的算法并不一定就是最优的。相反，有时平均时间复杂度高的算法可能更适合某些特殊情况。同时，选择算法时还得考虑它的可读性，以利于软件的维护。一般而言，需要考虑的因素有以下四点：  </p>
+<ul>
+<li>待排序的记录数目n的大小；</li>
+<li>记录本身数据量的大小，也就是记录中除关键字外的其他信息量的大小；</li>
+<li>关键字的结构及其分布情况；</li>
+<li>对排序稳定性的要求。</li>
+</ul>
+<p>设待排序元素的个数为n.  </p>
+<ul>
+<li>当n较大，则应采用时间复杂度为O(nlog2n)的排序方法：快速排序、堆排序或归并排序序。<ul>
+<li>快速排序：是目前基于比较的内部排序中被认为是最好的方法，当待排序的关键字是随机分布时，快速排序的平均时间最短；</li>
+<li>堆排序 ：  如果内存空间允许且要求稳定性的，</li>
+<li>归并排序：它有一定数量的数据移动，所以我们可能过与插入排序组合，先获得一定长度的序列，然后再合并，在效率上将有所提高。</li>
+</ul>
+</li>
+<li>当n较大，内存空间允许，且要求稳定性 =》归并排序</li>
+<li><p>当n较小，可采用直接插入或直接选择排序。</p>
+<ul>
+<li>直接插入排序：当元素分布有序，直接插入排序将大大减少比较次数和移动记录的次数。</li>
+<li>直接选择排序 ：元素分布有序，如果不要求稳定性，选择直接选择排序  </li>
+</ul>
+</li>
+<li><p>一般不使用或不直接使用传统的冒泡排序。</p>
+</li>
+<li>基数排序<br>它是一种稳定的排序算法，但有一定的局限性：<ul>
+<li>关键字可分解。</li>
+<li>记录的关键字位数较少，如果密集更好</li>
+<li>如果是数字时，最好是无符号的，否则将增加相应的映射复杂度，可先将其正负分开排序。</li>
+</ul>
+</li>
+</ul>
+<p>一张排序10个数字的耗时图：  </p>
+<p><img src="../images/sort-summary-4.png" alt="sample"></p>
+
       
     </div>
     
@@ -330,6 +416,14 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/algorithm/" rel="tag"># algorithm</a>
+          
+            <a href="/tags/sort/" rel="tag"># sort</a>
+          
+        </div>
       
 
       
